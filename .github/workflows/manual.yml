@@ -1,21 +1,23 @@
 name: Sedstart Local Windows
 
 on:
-   workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
-      sedstart-run:
-  runs-on: windows-latest
-  steps:
-    - name: Install Playwright
-      run: npm install -g playwright@1.52.0
+  sedstart-run:
+    runs-on: windows-latest
 
-    - name: Trigger SedStart test run
-      uses: sedstart/runlocal@v1
-      with:
-        api_key: ${{ secrets.SEDSTART_API_KEY_QA }}
-        project_id: 444
-        test_id: 2159
-        profile_id: 953
-        browser: chrome
-        headless: false
+    steps:
+      - name: Install Playwright
+        run: npm install -g playwright@1.52.0
+
+      - name: Trigger SedStart test run
+        uses: sedstart/runlocal@v1
+        with:
+          api_key: ${{ secrets.SEDSTART_API_KEY_QA }}
+          project_id: 429
+          test_id: 2173
+          profile_id: 888
+          browser: chrome
+          headless: false
+
