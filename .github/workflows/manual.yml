@@ -20,4 +20,5 @@ jobs:
           profile_id: 888
           browser: chrome
           headless: false
+          environment: QA
 
